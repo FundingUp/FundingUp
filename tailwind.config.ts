@@ -10,7 +10,12 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#5A98BF",
+        text: "#011126",
+        gray: "gray-300"
+      },
+      fontFamily: {
+        sans: ['var(--font-poppins)'],
       },
     },
   },
