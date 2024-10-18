@@ -25,6 +25,48 @@ export default function Home() {
       <div className="relative z-10 flex flex-col">
         <HeroSection />
         {/* Add more sections here */}
+        <div className="w-full bg-background flex flex-col" id="section1">
+
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+          <span>AAAAA</span>
+        </div>
       </div>
     </div>
   )

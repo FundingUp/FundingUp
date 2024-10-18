@@ -6,7 +6,7 @@ import SliderButton from '../ui/sliderButton'
 
 export default function HeroSection() {
     const scrollToNextSection = () => {
-        const nextSection = document.getElementById('next-section')
+        const nextSection = document.getElementById('section1')
         if (nextSection) {
             nextSection.scrollIntoView({ behavior: 'smooth' })
         }
@@ -15,7 +15,7 @@ export default function HeroSection() {
     return (
         <div className="relative min-h-[70vh] w-full">
             {/* Content Container */}
-            <div className="relative h-[80vh] flex flex-col justify-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div className="relative h-[90vh] flex flex-col justify-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                 <div className="space-y-8">
                     {/* Hero Title */}
                     <motion.h1
@@ -53,22 +53,8 @@ export default function HeroSection() {
                         transition={{ delay: 0.6, duration: 0.8 }}
                         className="flex flex-wrap gap-4"
                     >
-                        {/* <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-8 py-3 bg-primary text-white rounded-md font-medium hover:bg-blue-950 transition-colors"
-                        >
-                            Get Started
-                        </motion.button> */}
                         <SliderButton text='Get started' bg='primary' color='white'/>
                         <SliderButton text='Learn More' bg='white/10' color='white'/>
-                        {/* <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-8 py-3 bg-white/10 text-white rounded-md font-medium hover:bg-white/20 transition-colors backdrop-blur-sm"
-                        >
-                            Learn More
-                        </motion.button> */}
                     </motion.div>
                 </div>
 
@@ -87,7 +73,7 @@ export default function HeroSection() {
                             ease: "easeInOut"
                         }
                     }}
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 text-white flex flex-col items-center gap-2 cursor-pointer"
+                    className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white flex flex-col items-center gap-2 cursor-pointer"
                 >
                     <span className="text-sm font-medium">Explore</span>
                     <LuChevronDown className="w-6 h-6 animate-bounce" />

@@ -53,7 +53,7 @@ export default function Navbar() {
 
     return (
         <header
-            className={`fixed w-full bg-white/80 backdrop-blur-md border-b-2 border-b-primary border-stone-300 z-50 transition-all duration-300
+            className={`fixed w-full backdrop-blur-md bg-white border-b-2 border-b-primary border-stone-300 z-50 transition-all duration-300
         ${(!isAtTop && scrollDirection === 'down') ? '-translate-y-full' : 'translate-y-0'}
         ${(!isAtTop && scrollDirection === 'up') ? 'shadow-md' : ''}
       `}
