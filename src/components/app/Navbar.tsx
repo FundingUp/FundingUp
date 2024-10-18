@@ -36,13 +36,13 @@ const useScrollDirection = () => {
     return { scrollDirection, isAtTop }
 }
 
-const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
+const NavLink = ({ href, title }: { href: string; title: string }) => {
     return (
         <Link
             href={href}
-            className="group relative text-gray-700 transition-colors duration-300"
+            className="group relative text-text transition-colors duration-300 font-medium"
         >
-            {children}
+            {title}
             <span className="absolute bottom-0 rounded-full left-0 h-[2px] w-0 bg-primary transition-all duration-300 ease-out group-hover:w-full" />
         </Link>
     )
@@ -53,25 +53,26 @@ export default function Navbar() {
 
     return (
         <header
-            className={`fixed w-full bg-white/80 backdrop-blur-md border-b border-stone-300 z-50 transition-all duration-300
+            className={`fixed w-full bg-white/80 backdrop-blur-md border-b-2 border-b-primary border-stone-300 z-50 transition-all duration-300
         ${(!isAtTop && scrollDirection === 'down') ? '-translate-y-full' : 'translate-y-0'}
+        ${(!isAtTop && scrollDirection === 'up') ? 'shadow-md' : ''}
       `}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="flex justify-between items-center py-4">
                     {/* Logo/Brand */}
                     <div className="flex-shrink-0">
-                        <Link href="/" className="text-xl font-bold">
+                        <Link href="/" className="text-xl text-text font-bold">
                             Funding<span className='text-primary'>Up</span>
                         </Link>
                     </div>
 
                     {/* Navigation Links */}
                     <nav className="hidden md:flex items-center space-x-8">
-                        <NavLink href="/">Home</NavLink>
-                        <NavLink href="/about">About</NavLink>
-                        <NavLink href="/services">Services</NavLink>
-                        <NavLink href="/contact">Contact</NavLink>
+                        <NavLink href="/" title='Home' />
+                        <NavLink href="/services" title='Services' />
+                        <NavLink href="/contacts" title='Contacts' />
+                        <NavLink href="/about" title='About' />
                     </nav>
 
                     {/* CTA Button */}

@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         primary: "#5A98BF",
-        text: "#011126",
+        text: "#012B5C",
         gray: "gray-300"
       },
       fontFamily: {
