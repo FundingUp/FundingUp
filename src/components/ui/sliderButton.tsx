@@ -11,7 +11,7 @@ interface props {
 export default function SliderButton({ bg, color, text }: props) {
     return (
             <button
-                className={`bg-${bg} text-${text} px-8 py-3 flex overflow-hidden items-center text-sm font-medium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 shadow whitespace-pre md:flex group relative justify-center gap-2 rounded-md transition-all duration-300 ease-out `}
+                className={`${bg} text-${text} px-8 py-3 flex overflow-hidden items-center text-sm font-medium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 shadow whitespace-pre md:flex group relative justify-center gap-2 rounded-md transition-all duration-300 ease-out `}
             >
                 <span
                     className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40"

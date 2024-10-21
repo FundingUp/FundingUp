@@ -77,7 +77,7 @@ export default function Navbar() {
 
                     {/* CTA Button */}
                     <div className="hidden md:flex items-center">
-                        <button className="bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-950 transition-colors">
+                        <button className="bg-primary text-white px-4 py-2 rounded-md hover:bg-text transition-colors duration-500">
                             Get Started
                         </button>
                     </div>

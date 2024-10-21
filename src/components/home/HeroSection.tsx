@@ -53,8 +53,8 @@ export default function HeroSection() {
                         transition={{ delay: 0.6, duration: 0.8 }}
                         className="flex flex-wrap gap-4"
                     >
-                        <SliderButton text='Get started' bg='primary' color='white'/>
-                        <SliderButton text='Learn More' bg='white/10' color='white'/>
+                        <SliderButton text='Get started' bg='bg-primary' color='white'/>
+                        <SliderButton text='Learn More' bg='bg-white/10' color='white'/>
                     </motion.div>
                 </div>
 
@@ -63,35 +63,10 @@ export default function HeroSection() {
                     onClick={scrollToNextSection}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                        delay: 0.9,
-                        duration: 0.8,
-                        y: {
-                            duration: 0.8,
-                            repeat: Infinity,
-                            repeatType: "reverse",
-                            ease: "easeInOut"
-                        }
-                    }}
-                    className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white flex flex-col items-center gap-2 cursor-pointer"
+                    className="absolute bottom-5 self-center -translate-x-1/2 text-white flex items-center cursor-pointer bg-primary animate-bounce p-1 rounded-full"
                 >
-                    <span className="text-sm font-medium">Explore</span>
-                    <LuChevronDown className="w-6 h-6 animate-bounce" />
+                    <LuChevronDown className="w-6 h-6 duration-200" />
                 </motion.button>
-
-                {/* Decorative Elements */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 0.1, scale: 1 }}
-                    transition={{ delay: 1, duration: 1.5 }}
-                    className="absolute top-1/4 right-[10%] w-64 h-64 bg-primary rounded-full blur-3xl"
-                />
-                <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 0.1, scale: 1 }}
-                    transition={{ delay: 1.2, duration: 1.5 }}
-                    className="absolute bottom-1/4 left-[10%] w-96 h-96 bg-blue-600 rounded-full blur-3xl"
-                />
             </div>
         </div>
     )

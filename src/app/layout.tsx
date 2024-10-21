@@ -20,6 +20,9 @@ interface rootLayoutProps {
 export default function RootLayout({ children }: rootLayoutProps) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" as="image" href="/images/banner.jpg" />
+      </head>
       <body className={poppins.className}>
         <Navbar />
         <main className="pt-16">
