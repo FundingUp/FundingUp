@@ -1,20 +1,67 @@
 "use client"
 
+import InvestCard from "../ui/InvestCard"
 
+type Types = 'Comercial' | 'Residencial'
 
 export default function MainFundings() {
-    
-    return (
-        <section id="section1">
+    const investments = [
+        {
+            title: "T3 Cascais",
+            image: "/images/building1.jpg",
+            price: 250000,
+            deadline: 16,
+            type: 'Residencial' as Types,
+            funds: 120000,
+            location: "Cascais, Lisboa",
+            return: 11
+        },
+        {
+            title: "Office Space Porto",
+            image: "/images/building2.jpg",
+            price: 380000,
+            deadline: 21,
+            type: 'Comercial' as Types,
+            funds: 180000,
+            location: "Porto, Portugal",
+            return: 13
+        },
+        {
+            title: "Villa Algarve",
+            image: "/images/building3.jpg",
+            price: 420000,
+            deadline: 30,
+            type: 'Residencial' as Types,
+            funds: 200000,
+            location: "Faro, Algarve",
+            return: 15
+        }
+    ];
 
-            <h1 className="bg-gradient-to-t bg-clip-text text-transparent from-slate-500 via-primary to-primary text-center text-6xl font-semibold">
-                Make Your Investiments
+    return (
+        <section id="section1" className="container mx-auto px-4 py-16">
+            <h1 className="bg-gradient-to-t from-slate-500 via-primary to-primary bg-clip-text text-center text-5xl font-semibold text-transparent md:text-6xl">
+                Make Your Investments
             </h1>
 
-            <p className="text-gray-400 text-center">Easy way to make money trusting someone else</p>
+            <p className="mb-16 text-center text-gray md:mb-20">
+                Easy way to make money trusting someone else
+            </p>
 
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {investments.map((item, index) => (
+                    <InvestCard
+                        title={item.title}
+                        image={item.image}
+                        deadline={item.deadline}
+                        funds={item.funds}
+                        location={item.location}
+                        price={item.price}
+                        return={item.return}
+                        type={item.type}
+                    />
+                ))}
+            </div>
         </section>
     )
-
-
 }

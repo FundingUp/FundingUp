@@ -13,9 +13,9 @@ export default function HeroSection() {
     }
 
     return (
-        <div className="relative min-h-[70vh] w-full">
+        <div className="relative w-full">
             {/* Content Container */}
-            <div className="relative h-[90vh] flex flex-col justify-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div className="relative h-[85vh] flex flex-col justify-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                 <div className="space-y-8">
                     {/* Hero Title */}
                     <motion.h1
