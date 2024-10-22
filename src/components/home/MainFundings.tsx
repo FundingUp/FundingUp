@@ -17,7 +17,7 @@ export default function MainFundings() {
             return: 11
         },
         {
-            title: "Office Space Porto",
+            title: "Office Space",
             image: "/images/building2.jpg",
             price: 380000,
             deadline: 21,
@@ -39,7 +39,7 @@ export default function MainFundings() {
     ];
 
     return (
-        <section id="section1" className="container mx-auto px-4 py-16">
+        <section id="section1" className="container mx-auto py-16">
             <h1 className="bg-gradient-to-t from-slate-500 via-primary to-primary bg-clip-text text-center text-5xl font-semibold text-transparent md:text-6xl">
                 Make Your Investments
             </h1>
@@ -51,6 +51,7 @@ export default function MainFundings() {
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {investments.map((item, index) => (
                     <InvestCard
+                        key={index}
                         title={item.title}
                         image={item.image}
                         deadline={item.deadline}
