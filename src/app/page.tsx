@@ -1,6 +1,7 @@
 "use client"
 
 import HeroSection from "@/components/home/HeroSection"
+import InvestKnowlegeInsentive from "@/components/home/InvestKnowlegeInsentive"
 import MainFundings from "@/components/home/MainFundings"
 import Image from "next/image"
 
@@ -25,12 +26,14 @@ export default function Home() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col">
-        
+
         <HeroSection />
 
         <div className="w-full bg-background flex flex-col pt-10 pb-10">
 
           <MainFundings />
+
+          <InvestKnowlegeInsentive />
 
         </div>
       </div>
