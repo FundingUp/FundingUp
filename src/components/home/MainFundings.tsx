@@ -10,9 +10,9 @@ export default function MainFundings() {
             title: "T3 Cascais",
             image: "/images/building1.jpg",
             price: 250000,
-            deadline: 16,
+            deadline: 11,
             type: 'Residencial' as Types,
-            funds: 120000,
+            funds: 50000,
             location: "Cascais, Lisboa",
             return: 11
         },
@@ -22,7 +22,7 @@ export default function MainFundings() {
             price: 380000,
             deadline: 21,
             type: 'Comercial' as Types,
-            funds: 180000,
+            funds: 220000,
             location: "Porto, Portugal",
             return: 13
         },

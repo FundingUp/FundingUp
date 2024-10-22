@@ -1,4 +1,4 @@
-function convertMonthsToYears(months: number) {
+export function convertMonthsToYears(months: number) {
     if (months < 0) {
         throw new Error("Number of months cannot be negative.");
     }
@@ -7,8 +7,8 @@ function convertMonthsToYears(months: number) {
     const remainingMonths = months % 12;
 
     if (years > 0) {
-        return { value: years, type: "years" }
+        return { value: years, type: "year(s)" }
     } else {
-        return { value: remainingMonths, type: "months" }
+        return { value: remainingMonths, type: "month(s)" }
     }
 }

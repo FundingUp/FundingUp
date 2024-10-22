@@ -25,7 +25,7 @@ export default function Home() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col">
--
+        
         <HeroSection />
 
         <div className="w-full bg-background flex flex-col pt-10 pb-10">

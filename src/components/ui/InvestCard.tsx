@@ -1,7 +1,10 @@
 "use client"
 
-import Image from 'next/image';
-import { LuArrowUpRight, LuTrendingUp, LuHome, LuBuilding, LuMapPin } from 'react-icons/lu';
+import { calculatePercentage } from '@/utils/calculatePercentage'
+import { convertMonthsToYears } from '@/utils/monthsToYears'
+import Image from 'next/image'
+import { LuArrowUpRight, LuTrendingUp, LuHome, LuBuilding, LuMapPin, LuCalendar, LuCalendarCheck, LuCalendarCheck2 } from 'react-icons/lu'
+import { ProgressBar } from "react-progressbar-fancy"
 
 type Types = 'Comercial' | 'Residencial'
 
@@ -17,6 +20,14 @@ interface Props {
 }
 
 export default function InvestCard(props: Props) {
+
+    const percentage = calculatePercentage(props.funds, props.price)
+    const deadline = convertMonthsToYears(props.deadline)
+    const price = new Intl.NumberFormat('en-US', {
+        style: 'decimal',
+        currency: 'EUR',
+    }).format(props.price)
+
     return (
         <div className="group relative rounded-lg bg-white transition-all duration-300 hover:-translate-y-1 shadow-xl">
             {/* Image Container with Zoom Effect */}
@@ -49,7 +60,7 @@ export default function InvestCard(props: Props) {
                         {props.title}
                     </h2>
 
-                    <div className="mb-4 flex items-baseline justify-between">
+                    <div className=" flex items-baseline justify-between">
                         <div className='flex gap-1 items-center'>
                             <LuMapPin className='text-primary' />
                             <p className="text-primary">
@@ -61,7 +72,22 @@ export default function InvestCard(props: Props) {
                             <span>{props.return}% ROI</span>
                         </div>
                     </div>
+                    <div className='flex gap-1 items-center mb-4'>
+                        <LuCalendarCheck2 className='text-primary' />
+                        <p className="text-primary">
+                            {deadline.value} {deadline.type}
+                        </p>
+                    </div>
                 </div>
+
+                {/* Progress funding */}
+                <ProgressBar
+                    score={percentage}
+                    secondaryColor='#5A98BF'
+                    primaryColor='#012B5C'
+                    label={`€${price}`}
+                    className='mb-2'
+                />
 
                 {/* See More Button */}
                 <button className="group/button w-full bg-gradient-to-br from-blue-300 via-primary to-primary text-white py-3 rounded-md hover:bg-primary/90 transition-colors duration-300 mt-4 flex items-center justify-center gap-2">
