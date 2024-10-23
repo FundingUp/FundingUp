@@ -4,7 +4,8 @@ import { calculatePercentage } from '@/utils/calculatePercentage'
 import { convertMonthsToYears } from '@/utils/monthsToYears'
 import Image from 'next/image'
 import { LuArrowUpRight, LuTrendingUp, LuHome, LuBuilding, LuMapPin, LuCalendar, LuCalendarCheck, LuCalendarCheck2 } from 'react-icons/lu'
-import { ProgressBar } from "react-progressbar-fancy"
+// import { ProgressBar } from "react-progressbar-fancy"
+import ProgressBar from '../ui/ProgressBar'
 
 type Types = 'Comercial' | 'Residencial'
 
@@ -23,10 +24,7 @@ export default function InvestCard(props: Props) {
 
     const percentage = calculatePercentage(props.funds, props.price)
     const deadline = convertMonthsToYears(props.deadline)
-    const price = new Intl.NumberFormat('en-US', {
-        style: 'decimal',
-        currency: 'EUR',
-    }).format(props.price)
+    
 
     return (
         <div className="group relative rounded-lg bg-white transition-all duration-300 hover:-translate-y-1 shadow-xl">
@@ -79,14 +77,10 @@ export default function InvestCard(props: Props) {
                         </p>
                     </div>
                 </div>
-
-                {/* Progress funding */}
+                
                 <ProgressBar
-                    score={percentage}
-                    secondaryColor='#5A98BF'
-                    primaryColor='#012B5C'
-                    label={`€${price}`}
-                    className='mb-2'
+                    current={percentage}
+                    total={props.price}
                 />
 
                 {/* See More Button */}

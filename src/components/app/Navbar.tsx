@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 
 const useScrollDirection = () => {
     const [scrollDirection, setScrollDirection] = useState("up")
@@ -36,20 +37,39 @@ const useScrollDirection = () => {
     return { scrollDirection, isAtTop }
 }
 
-const NavLink = ({ href, title }: { href: string; title: string }) => {
-    return (
-        <Link
-            href={href}
-            className="group relative text-text transition-colors duration-300 font-medium"
-        >
-            {title}
-            <span className="absolute bottom-0 rounded-full left-0 h-[2px] w-0 bg-primary transition-all duration-300 ease-out group-hover:w-full" />
-        </Link>
-    )
-}
+
 
 export default function Navbar() {
+
     const { scrollDirection, isAtTop } = useScrollDirection()
+
+    const router = useRouter()
+    const pathname = usePathname()
+
+    const goToMenu = (href: string) => {
+        // If we're on the same page and the section exists, scroll to it
+        if (pathname === '/') {
+            const section = document.getElementById(href.replace('/', ''))
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' })
+                return
+            }
+        }
+        // If section doesn't exist or we're on a different page, navigate to the new route
+        router.push(href)
+    }
+
+    const NavLink = ({ href, title }: { href: string; title: string }) => {
+        return (
+            <li
+                onClick={() => goToMenu(href)}
+                className="group relative text-text transition-colors duration-300 font-medium cursor-pointer list-none"
+            >
+                {title}
+                <span className="absolute bottom-0 rounded-full left-0 h-[2px] w-0 bg-primary transition-all duration-300 ease-out group-hover:w-full" />
+            </li>
+        )
+    }
 
     return (
         <header
@@ -70,9 +90,9 @@ export default function Navbar() {
                     {/* Navigation Links */}
                     <nav className="hidden md:flex items-center space-x-8">
                         <NavLink href="/" title='Home' />
-                        <NavLink href="/services" title='Services' />
-                        <NavLink href="/contacts" title='Contacts' />
-                        <NavLink href="/about" title='About' />
+                        <NavLink href="services" title='Services' />
+                        <NavLink href="contacts" title='Contacts' />
+                        <NavLink href="about" title='About' />
                     </nav>
 
                     {/* CTA Button */}

@@ -1,5 +1,6 @@
 "use client"
 
+import AboutUsSection from "@/components/home/AboutUs"
 import HeroSection from "@/components/home/HeroSection"
 import InvestKnowlegeInsentive from "@/components/home/InvestKnowlegeInsentive"
 import MainFundings from "@/components/home/MainFundings"
@@ -34,6 +35,10 @@ export default function Home() {
           <MainFundings />
 
           <InvestKnowlegeInsentive />
+
+          <AboutUsSection />
+
+          <div id="services"></div>
 
         </div>
       </div>

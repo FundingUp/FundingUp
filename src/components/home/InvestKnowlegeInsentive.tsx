@@ -6,7 +6,7 @@ import { LuTrendingUp } from 'react-icons/lu'
 
 export default function InvestKnowlegeInsentive() {
     return (
-        <section id='InsentiveSection' className='pt-20 pb-20 flex flex-col items-center justify-center bg-slate-100 gap-5'>
+        <section id='InsentiveSection' className='pt-20 pb-20 flex flex-col items-center justify-center bg-slate-100 gap-5 text-center'>
 
             <h1 className='text-4xl text-text font-semibold'>
                 It's important to know what you're doing

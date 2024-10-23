@@ -1,6 +1,6 @@
 "use client"
 
-import InvestCard from "../ui/InvestCard"
+import InvestCard from "./InvestCard"
 
 type Types = 'Comercial' | 'Residencial'
 
