@@ -1,9 +1,10 @@
 "use client"
 
-import AboutUsSection from "@/components/home/AboutUs"
+import AboutUsSection from "@/components/home/AboutUsSection"
 import HeroSection from "@/components/home/HeroSection"
 import InvestKnowlegeInsentive from "@/components/home/InvestKnowlegeInsentive"
 import MainFundings from "@/components/home/MainFundings"
+import ServicesSection from "@/components/home/ServicesSection"
 import Image from "next/image"
 
 export default function Home() {
@@ -35,6 +36,8 @@ export default function Home() {
           <MainFundings />
 
           <InvestKnowlegeInsentive />
+
+          <ServicesSection />
 
           <AboutUsSection />
 

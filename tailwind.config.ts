@@ -12,7 +12,7 @@ const config: Config = {
         background: "#ffffff",
         primary: "#5A98BF",
         text: "#012B5C", 
-        gray: "rgb(209 213 219)"
+        gray: "#CFCFCF"
       },
       fontFamily: {
         sans: ['var(--font-poppins)'],
