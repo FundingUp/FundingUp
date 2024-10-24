@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 const useScrollDirection = () => {
     const [scrollDirection, setScrollDirection] = useState("up")
@@ -82,7 +83,14 @@ export default function Navbar() {
                 <div className="flex justify-between items-center py-4">
                     {/* Logo/Brand */}
                     <div className="flex-shrink-0">
-                        <Link href="/" className="text-xl text-text font-bold">
+                        <Link href="/" className="text-xl text-text font-bold flex items-center">
+                            <Image
+                                src={'/images/Logo1.png'}
+                                alt='logo'
+                                width={30}
+                                height={30}
+                                className='mr-2'
+                            />
                             Funding<span className='text-primary'>Up</span>
                         </Link>
                     </div>

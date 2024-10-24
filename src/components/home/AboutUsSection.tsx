@@ -69,7 +69,7 @@ export default function AboutUsSection() {
               description="We carefully curate projects to ensure high-quality opportunities for our backers."
             />
             <div className="relative group p-6 bg-primary text-white rounded-xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-              <h3 className="text-3xl font-bold mb-2">95%</h3>
+              <h3 className="text-3xl font-bold mb-2">100%</h3>
               <p className="text-white/90">Success rate for fully funded projects</p>
               <div className="absolute bottom-4 right-4 opacity-10">
                 <svg width="40" height="40" viewBox="0 0 24 24">

@@ -6,13 +6,16 @@ import Footer from "@/components/app/Footer"
 import ScrollUpButton from "@/components/app/ScrollUpButton"
 
 const poppins = Poppins({
-  weight: ['400', '500', '600', '700'],  // add the weights you need
+  weight: ['400', '500', '600', '700'], 
   subsets: ['latin'],
   display: 'swap',
 })
 
 export const metadata: Metadata = {
   title: "FundingUp",
+  icons: {
+    icon: '/images/Logo1.png'
+  }
 }
 
 interface rootLayoutProps {
