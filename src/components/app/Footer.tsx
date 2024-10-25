@@ -2,6 +2,7 @@
 
 import { LuMail, LuMapPin, LuPhone } from 'react-icons/lu'
 import { FaLinkedin, FaFacebookSquare, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 export default function Footer() {
     const currentYear = new Date().getFullYear()
@@ -19,18 +20,34 @@ export default function Footer() {
                             Making investments accessible and profitable for everyone. Join our community of successful investors.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="text-blue-100 hover:text-white transition-colors">
+                            <motion.a
+                                whileHover={{ scale: 1.1, rotate: 10 }}
+                                href="#"
+                                className="text-blue-100 hover:text-white transition-colors"
+                            >
                                 <FaFacebookSquare className="text-2xl" />
-                            </a>
-                            <a href="#" className="text-blue-100 hover:text-white transition-colors">
+                            </motion.a>
+                            <motion.a
+                                whileHover={{ scale: 1.1, rotate: 10 }}
+                                href="#"
+                                className="text-blue-100 hover:text-white transition-colors"
+                            >
                                 <FaInstagram className="text-2xl" />
-                            </a>
-                            <a href="#" className="text-blue-100 hover:text-white transition-colors">
+                            </motion.a>
+                            <motion.a
+                                whileHover={{ scale: 1.1, rotate: 10 }}
+                                href="#"
+                                className="text-blue-100 hover:text-white transition-colors"
+                            >
                                 <FaLinkedin className="text-2xl" />
-                            </a>
-                            <a href="#" className="text-blue-100 hover:text-white transition-colors">
+                            </motion.a>
+                            <motion.a
+                                whileHover={{ scale: 1.1, rotate: 10 }}
+                                href="#"
+                                className="text-blue-100 hover:text-white transition-colors"
+                            >
                                 <FaTwitter className="text-2xl" />
-                            </a>
+                            </motion.a>
                         </div>
                     </div>
 

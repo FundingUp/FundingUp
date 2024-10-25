@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
-import { LuChevronRight, LuRocket, LuBuilding2, LuUsers2, LuBriefcase, LuArrowRight, LuBadgeCheck } from 'react-icons/lu';
+import { LuChevronRight, LuRocket, LuBuilding2, LuUsers2, LuBriefcase, LuArrowRight, LuBadgeCheck, LuShieldCheck } from 'react-icons/lu';
 
 const ServiceCard = ({ icon: Icon, title, description, features, isActive, onClick }: any) => (
     <section
@@ -53,10 +53,10 @@ export default function ServicesSection () {
     const services = [
         {
             icon: LuRocket,
-            title: "Startup Funding",
-            description: "Launch your startup with the power of community backing and expert guidance.",
+            title: "Start Investing",
+            description: "Start is the first step to reach the success and WE will help you on this journey",
             features: [
-                "Campaign Strategy Development",
+                "Invest Support",
                 "Marketing Support",
                 "Investor Network Access",
                 "Post-funding Support"
@@ -85,14 +85,14 @@ export default function ServicesSection () {
             ]
         },
         {
-            icon: LuBriefcase,
-            title: "Business Expansion",
-            description: "Scale your existing business with crowd-backed growth capital.",
+            icon: LuShieldCheck,
+            title: "Secure Management",
+            description: "We keep our users safety first. We care about you. We protect you.",
             features: [
-                "Business Analysis",
-                "Funding Strategy",
-                "Growth Planning",
-                "Investor Relations"
+                "Legal Documentation",
+                "Refunds on failed projects",
+                "No illegal investors",
+                "Secure payment methods"
             ]
         }
     ];
