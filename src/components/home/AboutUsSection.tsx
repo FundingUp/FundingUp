@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { LuArrowUpRight, LuUsers, LuTarget, LuGem } from 'react-icons/lu'
+import Link from 'next/link'
 
 const FeatureCard = ({ icon: Icon, title, description }: any) => (
   <div className="relative group p-6 bg-white/50 rounded-xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
@@ -45,10 +46,12 @@ export default function AboutUsSection() {
               ecosystem of support and success.
             </p>
 
-            <button className="group flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-text transition-all duration-300">
-              Learn More About Us
-              <LuArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-            </button>
+            <Link href={'/about'} >
+              <button className="group flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-text transition-all duration-300">
+                Learn More About Us
+                <LuArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+              </button>
+            </Link>
           </div>
 
           {/* Right Column - Feature Grid */}
