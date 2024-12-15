@@ -6,6 +6,7 @@ import InvestKnowlegeInsentive from "@/components/home/InvestKnowlegeInsentive"
 import MainFundings from "@/components/home/MainFundings"
 import ServicesSection from "@/components/home/ServicesSection"
 import Image from "next/image"
+import background from '../../public/images/banner.avif'
 
 export default function Home() {
   
@@ -15,13 +16,14 @@ export default function Home() {
       {/* Fixed Background Image */}
       <div className="fixed inset-0 -z-10">
         <Image
-          src="/images/banner.jpg"
+          src={background}
           alt="Background"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-center relative"
           sizes="100vw"
           quality={100}
+          placeholder="blur"
         />
         <div className="absolute inset-0 bg-black/50" />
       </div>

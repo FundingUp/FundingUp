@@ -22,14 +22,14 @@ export default function About() {
             role: "CEO at TechCorp",
             content: "Working with this team has transformed our investment strategy. Their expertise and professional approach are unmatched.",
             rating: 5,
-            image: "/images/banner.jpg"
+            image: "/images/banner.avif"
         },
         {
             name: "Michael Chen",
             role: "Real Estate Developer",
             content: "Their attention to detail and market insight helped us achieve exceptional returns on our investments.",
             rating: 5,
-            image: "/images/banner.jpg"
+            image: "/images/banner.avif"
         }
     ]
 
@@ -112,7 +112,7 @@ export default function About() {
                             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg transform rotate-3" />
                             <div className="absolute inset-0 bg-white rounded-lg shadow-2xl -rotate-3 overflow-hidden" >
                                 <Image
-                                    src={'/images/banner.jpg'}
+                                    src={'/images/banner.avif'}
                                     alt="image"
                                     fill
                                     priority

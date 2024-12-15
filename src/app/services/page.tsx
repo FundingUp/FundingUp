@@ -52,6 +52,25 @@ const ServicesPage = () => {
         },
         {
             id: 2,
+            icon: <LuPieChart className="text-3xl" />,
+            title: "Portfolio Management",
+            description: "Professional management of diversified investment portfolios",
+            features: [
+                { icon: <LuTrendingUp />, text: "Active Management" },
+                { icon: <LuShieldCheck />, text: "Risk Mitigation" },
+                { icon: <LuUsers />, text: "Dedicated Support" }
+            ],
+            stats: {
+                roi: "10-14%",
+                minimum: "$100,000",
+                term: "12 months"
+            },
+            theme: "bg-amber-50 text-amber-900",
+            accent: "bg-amber-600",
+            highlight: "bg-amber-100"
+        },
+        {
+            id: 3,
             icon: <LuHome className="text-3xl" />,
             title: "Residential Projects",
             description: "Carefully curated residential properties in developing urban areas",
@@ -69,25 +88,6 @@ const ServicesPage = () => {
             accent: "bg-rose-600",
             highlight: "bg-rose-100"
         },
-        {
-            id: 3,
-            icon: <LuPieChart className="text-3xl" />,
-            title: "Portfolio Management",
-            description: "Professional management of diversified investment portfolios",
-            features: [
-                { icon: <LuTrendingUp />, text: "Active Management" },
-                { icon: <LuShieldCheck />, text: "Risk Mitigation" },
-                { icon: <LuUsers />, text: "Dedicated Support" }
-            ],
-            stats: {
-                roi: "10-14%",
-                minimum: "$100,000",
-                term: "12 months"
-            },
-            theme: "bg-amber-50 text-amber-900",
-            accent: "bg-amber-600",
-            highlight: "bg-amber-100"
-        }
     ];
 
     const heroVariants = {
