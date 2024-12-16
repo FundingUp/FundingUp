@@ -20,7 +20,7 @@ export default function Home() {
           alt="Background"
           fill
           priority
-          className="object-cover object-center relative"
+          className="object-cover object-center relative transition-opacity duration-500"
           sizes="100vw"
           quality={100}
           placeholder="blur"
